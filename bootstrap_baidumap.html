@@ -12,8 +12,6 @@
 		<!--import baidumap-->
 		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=c3MKSgGnMtYR424l826lqRqIi1cKgGBG"></script>
 		<style>
-			html{height:100%;}  
-			body{height:100%;margin:0px;padding:0px} 
 			#mygrid{
 				background-color: #FFFFFF;
 				box-shadow:inset 1px -1px 1px #444,inset -1px 1px 1px #444;
@@ -43,7 +41,6 @@
 			   padding-left: 15px;
 			   margin-right: auto;
 			   margin-left: auto;
-			   width: 1700px;
 			}
 		</style>
 	</head>
@@ -68,20 +65,88 @@
 					<div id="map" style="height:680px;margin-top: 6px">
 						<script>
 							var map = new BMap.Map("map");          // 创建地图实例  
-							var point = new BMap.Point(116.404, 39.915);  // 创建点坐标  
-							map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别
+							var point = new BMap.Point(104.071216, 30.662801);  // 创建点坐标  
+							map.centerAndZoom(point, 13);                 // 初始化地图，设置中心点坐标和地图级别
 							map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 						</script>
 					</div>
 				</div>
+				<!--分享数据-->
 				<div class="col-md-4" id="main_onebody">
-				5
+					<div style="height:10px"></div>
+					<div>
+						<p class="text-right text-danger">已有56人分享过数据</p>
+					</div>
+					<div style="height:20px"></div>
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label for="firstname" class="col-sm-3 control-label">站点名称</label>
+							<div class="col-sm-9">
+								<input ype="text" class="form-control" id="sitename" placeholder="请输入站点名称">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="firstname" class="col-sm-3 control-label">地理位置</label>
+							<div class="col-sm-9">
+								<input ype="text" class="form-control" id="sitename" placeholder="请输入地理位置">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="firstname" class="col-sm-3 control-label">联系电话</label>
+							<div class="col-sm-9">
+								<input ype="text" class="form-control" id="sitename" placeholder="请输入联系电话">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="firstname" class="col-sm-3 control-label">场地数量</label>
+							<div class="col-sm-9">
+								<input ype="text" class="form-control" id="sitename" placeholder="请输入场地总数">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="firstname" class="col-sm-3 control-label">场地均价</label>
+							<div class="col-sm-9">
+								<input ype="text" class="form-control" id="sitename" placeholder="请输入场地均价">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="firstname" class="col-sm-3 control-label">人均单价</label>
+							<div class="col-sm-9">
+								<input ype="text" class="form-control" id="sitename" placeholder="请输入人均单价">
+							</div>
+						</div>
+						<div style="height: 30px"></div>
+						<div class="form-group">
+							<div class="col-sm-offset-6 col-sm-6">
+								<button type="submit" class="btn btn-default">分享数据</button>
+							</div>
+						</div>
+					</form>
+					<div style="height:50px"></div>
+					<div class="col-md-12" style="background-color: #FFFFFF;">
+						<p class="text-primary" style="height: 50px">
+							**分享说明**
+						</p>
+					</div>
 				</div>
 			</div>
 			<!--第3行-->
 			<div class="row">
 				<div class="col-md-12" id="main_twobody">
-				6
+					<table class="table">
+						<caption>数据统计</caption>
+						<thead>
+							<tr>
+								<th>站点名称</th>
+								<th>联系电话</th>
+								<th>场地数量（个）</th>
+								<th>场地均价（￥）</th>
+								<th>人均单价（￥）</th>
+								<th>原始数据（条）</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
 				</div>
 			</div>
 			<!--第4行-->
